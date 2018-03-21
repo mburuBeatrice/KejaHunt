@@ -9,3 +9,25 @@ from django.contrib import messages
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
+
+
+def search_results(request):
+    if 'house' in request.GET and request.GET["house"]:
+        search_term = request.GET.get("house")
+        searched_houses = Image.search_by_category(search_term) 
+
+        message = f"{search_term}"
+        context = {
+            "message":message,
+            "houses":searched_houses
+
+        }
+
+        return render(request, 'search.html', context) 
+    else:
+        message = "You haven't searched for any term"
+        context = {
+            "message":message
+
+        }
+        return render(request, 'search.html',context) 
