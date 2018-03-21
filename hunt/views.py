@@ -1,5 +1,5 @@
 from . models import Contacts,About,House,Category
-# from .forms import NewHouseForm
+from .forms import NewHouseForm
 from django.shortcuts import render,get_object_or_404,redirect
 from django.http import HttpResponse,Http404,HttpResponseRedirect
 from django.contrib import messages
@@ -67,19 +67,19 @@ def house_details(request, id):
 
     return render(request, 'house_details.html', context)
 
-# @login_required(login_url='/accounts/login/')
-# def new_house(request):
-#     form = NewHouseForm(request.POST or None, request.FILES or None)
-#     if form.is_valid():
-#         new_house = form.save(commit=False)
-#         new_house.save()
-#         messages.success(request, "Successfully created")
-#         return redirect('/')
-#     else:
-#         messages.error(request, "Not successfully created")
+@login_required(login_url='/accounts/login/')
+def new_house(request):
+    form = NewHouseForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        new_house = form.save(commit=False)
+        new_house.save()
+        messages.success(request, "Successfully created")
+        return redirect('/')
+    else:
+        messages.error(request, "Not successfully created")
 
-#     context = {
-#         "form" : form,
-#     }
+    context = {
+        "form" : form,
+    }
 
-#     return render(request, 'house_form.html', context)
+    return render(request, 'house_form.html', context)
