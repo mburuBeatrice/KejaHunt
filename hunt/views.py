@@ -38,4 +38,22 @@ def home(request):
     "house" = house
     }
 
-    return render(request, 'home.html', context)    
+    return render(request, 'home.html', context)   
+def about(request):
+   
+    about = About.objects.all()
+
+    context = {
+     "about" : about
+    }
+
+    return render(request, 'about.html', context)
+def contact(request):
+   
+    contact = Contacts.objects.all()
+
+    context = {
+     "contact" : contact
+    }
+
+    return render(request, 'contact.html', context) 
