@@ -18,7 +18,7 @@ class House(models.Model):
     Description = models.TextField(max_length=250)
     Type = models.CharField(max_length=30)
     category = models.ForeignKey(Category)
-
+    user = models.OneToOneField(User,default=1)
 
     def __str__(self):
         return self.Location
