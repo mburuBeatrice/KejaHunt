@@ -29,7 +29,11 @@ class House(models.Model):
         self.create()
     def delete_house(self):
         self.delete()
+    @classmethod
+    def search_by_category(cls,search_term):
+        house_search = cls.objects.filter(category__category__icontains=search_term)
 
+        return house_search
 class Contacts(models.Model):
     name = models.CharField(max_length=30)
     phone_number = models.IntegerField()
