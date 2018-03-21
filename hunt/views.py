@@ -31,3 +31,11 @@ def search_results(request):
 
         }
         return render(request, 'search.html',context) 
+def home(request):
+   
+    house = House.objects.all()
+    context = {
+    "house" = house
+    }
+
+    return render(request, 'home.html', context)    
