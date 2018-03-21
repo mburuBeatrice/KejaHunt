@@ -30,3 +30,6 @@ class Contacts(models.Model):
 
     def __str__(self):
         return self.name
+
+class About(models.Model):
+    description = models.TextField(max_length=250)
