@@ -2,6 +2,10 @@
 {% load bootstrap4 %}
 {% block content %}
 {{block.super}}
-
-<section class="kejahunt"></section>
+    <h2>About</h2>
+    {% for about in about%}
+      <p>About us:{{about.description}}</p>
+    
+    {% endfor %}
+ <br>
 {% endblock %}
