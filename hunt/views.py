@@ -57,3 +57,12 @@ def contact(request):
     }
 
     return render(request, 'contact.html', context) 
+
+
+def house_details(request, id):
+    house = get_object_or_404(House, id=id)
+    context ={
+        "house": house
+    }
+
+    return render(request, 'house_details.html', context)

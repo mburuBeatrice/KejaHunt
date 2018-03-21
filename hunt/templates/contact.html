@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+{{block.super}}
+    <h2>Contacts</h2>
+    {% for contact in contact%}
+      <p>Name:{{contact.name }}</p>
+      <p>Phone_number:{{contact.phone_number}}</p>
+      <p>Email:{{contact.email_address}}</p>
+    {% endfor %}
+ <br>
+{% endblock %}
