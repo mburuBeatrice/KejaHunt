@@ -1,0 +1,46 @@
+body{
+    display: grid;
+    padding-left: 3em;
+    padding-right: 3em;
+
+}
+.bodytag{
+    font-family: 'Quicksand', sans-serif;
+}
+#heading1{
+    size:70px;
+    color: #2E9CE6;
+}
+#p2{
+    size:35px;
+    color: #2E9CE6;
+}
+
+.carousel-inner{
+ 
+        width:640px;
+        height:360px;
+        margin:40px;
+}
+ .navbar .navbar-nav li > a{
+    color:#111;
+}
+
+form {
+    float: right;
+
+}
+.navbar-text{
+    color:#111;
+}
+
+#cover{
+    height: 500px;
+    background-image: url("../images/cover2.jpg");
+    background-size: cover;
+    
+}
+article{
+    padding: 15em;
+
+}

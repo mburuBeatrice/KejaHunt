@@ -8,7 +8,12 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    house = House.objects.all()
+
+    context={
+        "house" : house
+    }
+    return render(request, 'index.html', context)
 
 
 def search_results(request):
@@ -83,3 +88,5 @@ def new_house(request):
     }
 
     return render(request, 'house_form.html', context)
+
+    

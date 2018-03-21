@@ -2,6 +2,48 @@
 {% load bootstrap4 %}
 {% block content %}
 {{block.super}}
+<section class="cover">
+       <div class="col" id="cover">
+               <article>
+               <h1 id="heading1"><strong>HouseHunt</strong></h1>
+               <p id="p2">House hunting made easy</p>
+               </article>
+</div>
+</section>
 
-<section class="kejahunt"></section>
+<section class="kejahunt">
+        {% for house in house%}
+        <div class="row">
+                <div class="col-sm-4">     <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{house.Image.url}}" alt="Card image cap">
+                        <div class="card-body">
+                          
+                                <button type="button" class="btn btn-primary" href=><a href="/house_details/{{user.id}}">View</a> </button></a>
+                        </div>
+                      </div></div>
+                <div class="col-sm-4">     <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{house.Image.url}}" alt="Card image cap">
+                        <div class="card-body">
+                               
+                                <button type="button" class="btn btn-primary" href=><a href="/house_details/{{user.id}}">View</a> </button></a>
+                        </div>
+                      </div></div>
+                <div class="col-sm-4">     
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{house.Image.url}}" alt="Card image cap">
+                        <div class="card-body">
+                              
+                                <button type="button" class="btn btn-primary" href=><a href="/house_details/{{user.id}}">View</a> </button></a>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+       
+              {% endfor %}
+    
+       
+     <br>
+
+
+</section>
 {% endblock %}
