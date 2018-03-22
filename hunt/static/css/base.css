@@ -1,26 +1,16 @@
 body{
     display: grid;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
 
 }
 .bodytag{
     font-family: 'Quicksand', sans-serif;
 }
-#heading1{
-    size:70px;
-    color: #2E9CE6;
-}
-#p2{
-    size:35px;
-    color: #2E9CE6;
-}
 
 .carousel-inner{
- 
-        width:640px;
-        height:360px;
-        margin:40px;
+     width: 800px;   
+     height:400px;
 }
  .navbar .navbar-nav li > a{
     color:#111;
@@ -36,11 +26,15 @@ form {
 
 #cover{
     height: 500px;
-    background-image: url("../images/cover2.jpg");
+    background-image: url("../images/cover4.jpg");
     background-size: cover;
-    
 }
 article{
-    padding: 15em;
+    padding: 10em;
 
 }
+
+.btn a{
+    color:#111;
+}
+

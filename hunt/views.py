@@ -19,7 +19,7 @@ def index(request):
 def search_results(request):
     if 'house' in request.GET and request.GET["house"]:
         search_term = request.GET.get("house")
-        searched_houses = Image.search_by_category(search_term) 
+        searched_houses = House.search_by_category(search_term) 
 
         message = f"{search_term}"
         context = {

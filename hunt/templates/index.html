@@ -5,45 +5,28 @@
 <section class="cover">
        <div class="col" id="cover">
                <article>
-               <h1 id="heading1"><strong>HouseHunt</strong></h1>
-               <p id="p2">House hunting made easy</p>
+               <h1 style="font-size:75px;   color: #fff;"><strong>HouseHunt</strong></h1>
+               <p  style="font-size:35px;   color: #fff;">House hunting made easy</p>
                </article>
 </div>
 </section>
 
 <section class="kejahunt">
-        {% for house in house%}
-        <div class="row">
-                <div class="col-sm-4">     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{house.Image.url}}" alt="Card image cap">
+       
+        <div class="row" style="float:center;">
+                {% for house in house%}     
+                        <div class="card" style="width: 15rem; margin-left:2em; margin-right:2em;" height="9rem">
+                        <img class="card-img-top" src="{{house.Image.url}}" alt="Card image cap" style="size:cover;">
                         <div class="card-body">
-                          
+                                <h2>Nice house</h2>
+                                <p>lorem ipsum blkdpgfj ljsljdfgj sofjgojg</p>
                                 <button type="button" class="btn btn-primary" href=><a href="/house_details/{{user.id}}">View</a> </button></a>
                         </div>
-                      </div></div>
-                <div class="col-sm-4">     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{house.Image.url}}" alt="Card image cap">
-                        <div class="card-body">
-                               
-                                <button type="button" class="btn btn-primary" href=><a href="/house_details/{{user.id}}">View</a> </button></a>
                         </div>
-                      </div></div>
-                <div class="col-sm-4">     
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{house.Image.url}}" alt="Card image cap">
-                        <div class="card-body">
-                              
-                                <button type="button" class="btn btn-primary" href=><a href="/house_details/{{user.id}}">View</a> </button></a>
-                        </div>
-                      </div>
-                    </div>
-              </div>
        
               {% endfor %}
-    
-       
+ 
      <br>
-
-
 </section>
+
 {% endblock %}

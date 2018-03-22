@@ -20,7 +20,7 @@ class House(models.Model):
     contact_email = models.EmailField(default=1)
     contact_number = models.IntegerField(default=1)
     category = models.ForeignKey(Category)
-    user = models.OneToOneField(User,default=1)
+    user = models.ForeignKey(User,default=1)
 
     def __str__(self):
         return self.Location
