@@ -15,7 +15,7 @@ class Category(models.Model):
 class House(models.Model):
     Location = models.CharField(max_length=30)
     Image = models.ImageField()
-    Description = models.TextField(max_length=250)
+    Description = models.TextField(max_length=1000)
     Type = models.CharField(max_length=30)
     contact_email = models.EmailField(default=1)
     contact_number = models.IntegerField(default=1)
