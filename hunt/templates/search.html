@@ -15,19 +15,27 @@
 
   {% if houses %}
     {% for house in houses %}
-      <div class="col-sm-6 col-md-3">
-            <!-- <section style=margin-left:350px;> -->
-                    <p>location:{{house.Location}}</p>
-                    <p>Details:{{house.Description }}</p>
-                    <p>Type:{{house.Type}}</p>
-                    <p>contact_email:{{house.contact_email}}</p>
-                    <p>contact_number:{{house.contact_number}}</p>
-                    <p>category:{{house.category}}</p>
+      <!-- <div class="col-sm-6 col-md-3">
+       
             
             
             
         
-      </div>
+      </div> -->
+      <div class="card" style="width: 50rem;">
+          <img class="card-img-top" src="{{house.Image.url}}" alt="Card image cap" style="size:cover;">
+          <div class="card-body">
+                  
+                 
+              <p>location:{{house.Location}}</p>
+              <p>Details:{{house.Description }}</p>
+              <p>Type:{{house.Type}}</p>
+              <p>contact_email:{{house.contact_email}}</p>
+              <p>contact_number:{{house.contact_number}}</p>
+              <p>category:{{house.category}}</p>
+                  <!-- <button type="button" class="btn btn-primary" href=><a href="/house_details/{{user.id}}">View</a> </button></a> -->
+          </div>
+          </div>
     {% endfor %}
   {% endif %}
   </div>

@@ -1,6 +1,14 @@
 {%extends "registration/base.html"%}
 {% load bootstrap4 %}
 {% block content %}
+<style>
+  body{
+
+
+    background-color:rgba(136, 155, 238, 0.726);
+    margin-top: 200px; 
+}
+</style>
 <div class="container">
   <div class="row">
     <!-- Empty div -->
@@ -12,7 +20,8 @@
       <div class="panel panel-default">
 
         <div class="panel-heading">
-          <h3 class="text-center">Sign In</h3>
+          <h3 style="    font-family: 'Quicksand', sans-serif; color:aliceblue
+          " class="text-center">HouseHunt</h3>
         </div>
         <div class="panel-body">
 
@@ -21,8 +30,8 @@
             {% bootstrap_form form%}
 
             <div class="form-group">
-                <input type="submit" class="btn btn-primary btn-sm" value="Login">
-                If you don't have an account <a href="/accounts/register/">Sign Up</a>
+                <input type="submit" class="btn btn-primary btn-sm" style=" font-family: 'Quicksand', sans-serif; color:aliceblue;" value="Login">
+                If you don't have an account <a href="/accounts/register/" style=" font-family: 'Quicksand', sans-serif; color:aliceblue;">Sign Up</a>
               </div>
 
             <input type="hidden" name="next" value="/">
